@@ -11,4 +11,34 @@
 
 [alias]
 	st = status
-	
+	co = checkout
+	br = branch
+	ci = commit
+	sw = switch
+
+	# 日志（好看）
+	lg = log --oneline --graph --decorate --all
+	lg10 = log --oneline --graph --decorate -10
+	hist = log --stat --pretty=short --graph
+
+	# 状态与差异
+	ds = diff --staged
+	d = diff
+	dc = diff --cached
+	last = log -1 --stat
+
+	# 提交
+	amend = commit --amend --no-edit
+	unstage = reset HEAD --
+	undo = reset --soft HEAD~1
+
+	# 分支
+	nb = checkout -b
+	del = branch -d
+	delf = branch -D
+
+	# 远程
+	f = fetch --all --prune
+	pl = pull --rebase
+	ps = push
+	psu = push -u origin HEAD
